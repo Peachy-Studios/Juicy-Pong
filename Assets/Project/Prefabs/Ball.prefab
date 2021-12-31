@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4160857910935484014}
+  - component: {fileID: -4940957953128749763}
+  - component: {fileID: 2913994122184063214}
   - component: {fileID: 4160857910935484009}
   - component: {fileID: 7798913154121946988}
   - component: {fileID: 7103500620329809391}
-  - component: {fileID: 2913994122184063214}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -35,6 +36,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4940957953128749763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160857910935484008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381605ea77fe7274ea97b5d2d8247236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &2913994122184063214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160857910935484008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee425ce0b698dde49944e6fc6f325a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 20
 --- !u!212 &4160857910935484009
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -117,7 +144,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 4160857910935484008}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 354869346741c00499a590e15c45d1bc, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -134,16 +161,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2913994122184063214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4160857910935484008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee425ce0b698dde49944e6fc6f325a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 10
