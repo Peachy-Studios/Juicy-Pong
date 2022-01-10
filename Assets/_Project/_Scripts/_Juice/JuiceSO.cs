@@ -11,6 +11,6 @@ public class JuiceSO : ScriptableObject
     public bool BallRotationEnabled { get; set; }
     public bool BallFlashEnabled { get; set; }
     public bool CameraShakeEnabled { get; set; }
-
-
+    public bool WallWobbleEnabled { get; set; }
+    public bool BallHitSoundEnabled { get; set; }
 }

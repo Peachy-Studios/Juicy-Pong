@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BallFlash : Juiceable
+public class WallWobble : Juiceable
 {
     #region Serialized Fields
     #endregion
@@ -12,15 +12,20 @@ public class BallFlash : Juiceable
     #endregion
 
     #region MonoBehaviour Callbacks
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ball")) Toggle();
+    }
     #endregion
 
     #region Private Methods
     #endregion
 
     #region Public Methods
+
     public override void Toggle()
     {
-        if (_gameManager._settings.BallFlashEnabled) Play();
+        if (_gameManager._settings.WallWobbleEnabled) Play();
     }
 
     #endregion

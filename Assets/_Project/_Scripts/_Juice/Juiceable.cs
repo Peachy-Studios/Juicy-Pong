@@ -13,4 +13,9 @@ public abstract class Juiceable : MonoBehaviour, IJuiceable
         _gameManager = FindObjectOfType<GameManager>();
     }
     public abstract void Toggle();
+
+    public void Play()
+    {
+        MMFeedbacksPlay.Play(_feedbacks);
+    }
 }

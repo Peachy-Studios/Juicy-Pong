@@ -6,4 +6,6 @@ public enum SettingsEnum
     BallRotationEnabled,
     BallFlashEnabled,
     CameraShakeEnabled,
+    WallWobbleEnabled,
+    BallHitSoundEnabled,
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BallFlash : Juiceable
+public class BallHitSound : Juiceable
 {
     #region Serialized Fields
     #endregion
@@ -20,7 +20,7 @@ public class BallFlash : Juiceable
     #region Public Methods
     public override void Toggle()
     {
-        if (_gameManager._settings.BallFlashEnabled) Play();
+        if (_gameManager._settings.BallHitSoundEnabled) Play();
     }
 
     #endregion

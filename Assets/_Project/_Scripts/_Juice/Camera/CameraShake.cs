@@ -18,10 +18,10 @@ public class CameraShake : Juiceable
     #endregion
 
     #region Public Methods
-    #endregion
     public override void Toggle()
     {
         // TODO: tell aisha ki cado tne asT
-        if (_gameManager._settings.CameraShakeEnabled) MMFeedbacksPlay.Play(_feedbacks);
+        if (_gameManager._settings.CameraShakeEnabled) Play();
     }
+    #endregion
 }
