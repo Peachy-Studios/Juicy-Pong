@@ -8,4 +8,6 @@ public enum SettingsEnum
     CameraShakeEnabled,
     WallWobbleEnabled,
     BallHitSoundEnabled,
+    WinSoundEnabled,
+    BackgroundMusicEnabled,
 }
