@@ -12,19 +12,24 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] public JuiceSO _settings;
 
-    [SerializeField] Juiceable _winSound;
+    [SerializeField] List<Juiceable> _juiceables;
     private void Start()
     {
         //var player1 = PlayerInput.Instantiate(_paddlePrefab, controlScheme: InputScheme.Player1.ToString(), pairWithDevice: Keyboard.current);
         _rightWall.OnScore += _player1Score.SetScore;
         _rightWall.OnScore += _player1ScoreDisplay.SetText;
-        _rightWall.OnScore += _winSound.Toggle;
+        
         //var player2 = PlayerInput.Instantiate(_paddlePrefab, controlScheme: InputScheme.Player2.ToString(), pairWithDevice: Keyboard.current);
         //player2.transform.position = new Vector3(9, 0, 0);
+        
         _leftWall.OnScore += _player2Score.SetScore;
         _leftWall.OnScore += _player2ScoreDisplay.SetText;
-        _leftWall.OnScore += _winSound.Toggle;
 
+        foreach (Juiceable juiceable in _juiceables)
+        {
+            _rightWall.OnScore += juiceable.Toggle;
+            _leftWall.OnScore += juiceable.Toggle;
+        }
     }
 }
 

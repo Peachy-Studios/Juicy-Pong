@@ -10,4 +10,6 @@ public enum SettingsEnum
     BallHitSoundEnabled,
     WinSoundEnabled,
     BackgroundMusicEnabled,
+    BallHitParticleEffectEnabled,
+    WinParticleEffectEnabled,
 }

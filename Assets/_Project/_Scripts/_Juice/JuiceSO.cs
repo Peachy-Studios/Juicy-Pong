@@ -15,4 +15,6 @@ public class JuiceSO : ScriptableObject
     public bool BallHitSoundEnabled { get; set; }
     public bool WinSoundEnabled { get; set; }
     public bool BackgroundMusicEnabled { get; set; }
+    public bool BallHitParticleEffectEnabled { get; set; }
+    public bool WinParticleEffectEnabled { get; set; }
 }
