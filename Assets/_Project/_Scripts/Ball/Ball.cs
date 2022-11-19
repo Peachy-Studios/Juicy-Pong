@@ -23,12 +23,14 @@ public class Ball : MonoBehaviour
 
     #region Private Properties
     private Rigidbody2D _rigidbody;
+    private TrailRenderer _trailRenderer;
     #endregion
 
     #region Unity Callbacks
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _trailRenderer = GetComponent<TrailRenderer>();
     }
 
     private void Start()

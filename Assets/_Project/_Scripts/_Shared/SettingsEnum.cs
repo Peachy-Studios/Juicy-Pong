@@ -12,4 +12,6 @@ public enum SettingsEnum
     BackgroundMusicEnabled,
     BallHitParticleEffectEnabled,
     WinParticleEffectEnabled,
+    BallTrailEnabled,
+    EyeFollow,
 }
