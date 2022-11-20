@@ -25,7 +25,7 @@ public class WallWobble : Juiceable
 
     public override void Toggle()
     {
-        if (_gameManager._settings.WallWobbleEnabled) Play();
+        if (_gameManager._settings.Options.WallWobbleEnabled) Play();
     }
 
     #endregion

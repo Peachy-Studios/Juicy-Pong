@@ -35,6 +35,7 @@ public class SwitchToggle : MonoBehaviour
         InitializeVariable();
 
         _hasStartCallbackEnded = true;
+
     }
     private void OnDestroy()
     {
@@ -59,18 +60,20 @@ public class SwitchToggle : MonoBehaviour
         _toggle.onValueChanged.AddListener(OnSwitch);
 
         // sets the toggle state
-        _toggle.isOn = (bool)Utils.GetPropertyValue(_juiceSetting, _setting.ToString());
+        _toggle.isOn = (bool)Utils.GetPropertyValue(_juiceSetting.Options, _setting.ToString());
         if (_toggle.isOn) OnSwitch(true);
     }
 
     void OnSwitch(bool on)
     {
-        Utils.SetPropertyValue(_juiceSetting, _setting.ToString(), on);
+        Utils.SetPropertyValue(_juiceSetting.Options, _setting.ToString(), on);
         _uiHandleRectTransform.DOAnchorPos(on ? _handlePosition * -1 : _handlePosition, .4f).SetEase(Ease.InOutBack);
         _backgroundImage.DOColor(on ? _backgroundActiveColor : _backgroundDefaultColor, .6f);
         _handleImage.DOColor(on ? _handleActiveColor : _handleDefaultColor, .4f);
+        
+        if (_hasStartCallbackEnded) SerializationManager.Save("Save", _juiceSetting.Options);
 
-        if(_shouldRestart && _hasStartCallbackEnded) StartCoroutine(OnSwitchCoroutine());
+        if (_shouldRestart && _hasStartCallbackEnded) StartCoroutine(OnSwitchCoroutine());
     }
     #endregion
 

@@ -40,7 +40,7 @@ public class EyeBehavior : Juiceable
     #region Public Methods
     public override void Toggle()
     {
-        //if(_followObjectTransform.gameObject.activeSelf != _gameManager._settings) 
+        //if(_followObjectTransform.gameObject.activeSelf != _gameManager._settings.Options) 
     }
     #endregion
 }

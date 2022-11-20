@@ -20,7 +20,7 @@ public class WinSoundEffect : Juiceable
     #region Public Methods
     public override void Toggle()
     {
-        if (_gameManager._settings.WinSoundEnabled) Play();
+        if (_gameManager._settings.Options.WinSoundEnabled) Play();
     }
     #endregion
 }

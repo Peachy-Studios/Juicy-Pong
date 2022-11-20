@@ -20,7 +20,7 @@ public class BallHitParticles : Juiceable
     #region Public Methods
     public override void Toggle()
     {
-        if (_gameManager._settings.BallHitParticleEffectEnabled) Play();
+        if (_gameManager._settings.Options.BallHitParticleEffectEnabled) Play();
     }
     #endregion
 }

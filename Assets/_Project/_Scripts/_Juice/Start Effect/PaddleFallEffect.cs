@@ -10,6 +10,6 @@ public class PaddleFallEffect : MonoBehaviour
 
     private void Awake()
     {
-        if (_settings.SpawnEffectEnabled) MMFeedbacksPlay.Play(_feedbacks);
+        if (_settings.Options.SpawnEffectEnabled) MMFeedbacksPlay.Play(_feedbacks);
     }
 }

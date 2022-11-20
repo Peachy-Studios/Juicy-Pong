@@ -20,7 +20,7 @@ public class BallHitSound : Juiceable
     #region Public Methods
     public override void Toggle()
     {
-        if (_gameManager._settings.BallHitSoundEnabled) Play();
+        if (_gameManager._settings.Options.BallHitSoundEnabled) Play();
     }
 
     #endregion

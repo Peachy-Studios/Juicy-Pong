@@ -20,7 +20,7 @@ public class BallFlash : Juiceable
     #region Public Methods
     public override void Toggle()
     {
-        if (_gameManager._settings.BallFlashEnabled) Play();
+        if (_gameManager._settings.Options.BallFlashEnabled) Play();
     }
 
     #endregion

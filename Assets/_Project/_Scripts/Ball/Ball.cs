@@ -35,7 +35,7 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        if (_settings.SpawnEffectEnabled) Invoke("ResetBall", 1f);
+        if (_settings.Options.SpawnEffectEnabled) Invoke("ResetBall", 1f);
         
         else ResetBall();
     }

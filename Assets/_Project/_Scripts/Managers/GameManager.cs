@@ -13,8 +13,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] public JuiceSO _settings;
 
     [SerializeField] List<Juiceable> _juiceables;
-    private void Start()
+    private void Awake()
     {
+        //Apply save items
+        _settings.Options = (JuiceSettings) SerializationManager.Load(Application.persistentDataPath + "/saves/" + "Save" + ".save");
+
         //var player1 = PlayerInput.Instantiate(_paddlePrefab, controlScheme: InputScheme.Player1.ToString(), pairWithDevice: Keyboard.current);
         _rightWall.OnScore += _player1Score.SetScore;
         _rightWall.OnScore += _player1ScoreDisplay.SetText;
@@ -30,6 +33,12 @@ public class GameManager : MonoBehaviour
             _rightWall.OnScore += juiceable.Toggle;
             _leftWall.OnScore += juiceable.Toggle;
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        // Save Game
+        SerializationManager.Save("Save", _settings.Options);
     }
 }
 

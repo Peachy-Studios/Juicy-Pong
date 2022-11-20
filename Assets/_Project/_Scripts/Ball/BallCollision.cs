@@ -25,7 +25,7 @@ public class BallCollision : MonoBehaviour
 
     private void RotateBall(Vector3 normal)
     {
-        if (!_gameManager._settings.BallRotationEnabled) return;
+        if (!_gameManager._settings.Options.BallRotationEnabled) return;
 
         transform.rotation = Quaternion.FromToRotation(transform.position, normal);
     }

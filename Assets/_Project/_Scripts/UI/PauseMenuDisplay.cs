@@ -12,6 +12,11 @@ public class PauseMenuDisplay : MonoBehaviour
         _pauseMenu.SetActive(!_pauseMenu.activeSelf);
     }
 
+    private void Start()
+    {
+        _pauseMenu.SetActive(false);
+    }
+
     private void Update()
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame) ShowHidePauseMenu();

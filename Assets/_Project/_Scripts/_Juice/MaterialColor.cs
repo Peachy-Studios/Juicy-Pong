@@ -9,11 +9,11 @@ public class MaterialColor : MonoBehaviour
 
     private Color _default;
 
-    private SpriteRenderer _spriteRenderer;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        if(!_spriteRenderer) _spriteRenderer = GetComponent<SpriteRenderer>();
         _default = _spriteRenderer.color;
     }
 

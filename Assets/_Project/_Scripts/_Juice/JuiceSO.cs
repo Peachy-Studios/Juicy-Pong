@@ -1,9 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Juice", menuName = "Juice/Settings", order = 22)]
 public class JuiceSO : ScriptableObject
+{
+    public JuiceSettings Options { get; set; }
+}
+
+[Serializable]
+public class JuiceSettings
 {
     public bool ColorsEnabled { get; set; }
     public bool SpawnEffectEnabled { get; set; }

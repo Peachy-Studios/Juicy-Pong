@@ -16,7 +16,7 @@ public class BallTrail : Juiceable
     #region MonoBehaviour Callbacks
     private void Update()
     {
-        if( _trailRenderer && _trailRenderer.enabled != _gameManager._settings.BallTrailEnabled )
+        if( _trailRenderer && _trailRenderer.enabled != _gameManager._settings.Options.BallTrailEnabled )
         {
             Toggle();
         }
@@ -29,7 +29,7 @@ public class BallTrail : Juiceable
     #region Public Methods
     public override void Toggle()
     {
-        _trailRenderer.enabled = _gameManager._settings.BallTrailEnabled;
+        _trailRenderer.enabled = _gameManager._settings.Options.BallTrailEnabled;
     }
     #endregion
 }

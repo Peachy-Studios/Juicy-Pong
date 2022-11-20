@@ -21,7 +21,7 @@ public class CameraShake : Juiceable
     public override void Toggle()
     {
         // TODO: tell aisha ki cado tne asT
-        if (_gameManager._settings.CameraShakeEnabled) Play();
+        if (_gameManager._settings.Options.CameraShakeEnabled) Play();
     }
     #endregion
 }

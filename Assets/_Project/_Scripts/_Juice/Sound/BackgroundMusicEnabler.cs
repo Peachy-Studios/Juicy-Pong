@@ -27,8 +27,8 @@ public class BackgroundMusicEnabler : Juiceable
     #region Public Methods
     public override void Toggle()
     {
-        if (_gameManager._settings.BackgroundMusicEnabled && !_audio.isPlaying) _audio.Play();
-        else if (!_gameManager._settings.BackgroundMusicEnabled && _audio.isPlaying) _audio.Stop();
+        if (_gameManager._settings.Options.BackgroundMusicEnabled && !_audio.isPlaying) _audio.Play();
+        else if (!_gameManager._settings.Options.BackgroundMusicEnabled && _audio.isPlaying) _audio.Stop();
     }
     #endregion
 }

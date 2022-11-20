@@ -20,7 +20,7 @@ public class WinParticleEnable : Juiceable
     #region Public Methods
     public override void Toggle()
     {
-        if (_gameManager._settings.WinParticleEffectEnabled) Play();
+        if (_gameManager._settings.Options.WinParticleEffectEnabled) Play();
     }
     #endregion
 }
