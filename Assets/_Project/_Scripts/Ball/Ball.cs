@@ -73,5 +73,10 @@ public class Ball : MonoBehaviour
 
         InitialForce();
     }
+
+    public void SetPaddleSpeed(float value)
+    {
+        _speed = value;
+    }
     #endregion
 }

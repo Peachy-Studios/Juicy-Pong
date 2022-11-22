@@ -103,6 +103,9 @@ MonoBehaviour:
   _uiHandleRectTransform: {fileID: 1655093643506453266}
   _backgroundActiveColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   _handleActiveColor: {r: 0.5945908, g: 1, b: 0.5424528, a: 1}
+  _juiceSetting: {fileID: 0}
+  _setting: 0
+  _shouldRestart: 0
 --- !u!1 &1655093643506453267
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,8 +327,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Color
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 191c85d053c814242b6d9fab0a91b9f9, type: 2}
+  m_sharedMaterial: {fileID: 6383068405828875511, guid: 191c85d053c814242b6d9fab0a91b9f9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -356,7 +359,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

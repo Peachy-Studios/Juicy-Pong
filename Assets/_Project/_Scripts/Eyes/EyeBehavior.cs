@@ -11,6 +11,8 @@ public class EyeBehavior : Juiceable
     [SerializeField]
     Transform _eyeBallRight;
 
+    [SerializeField]
+    GameObject _smileObject, _scaredObject;
     #endregion
 
     #region Private Properties
@@ -29,7 +31,8 @@ public class EyeBehavior : Juiceable
         _eyeBallRight.transform.up = -dir;
         _eyeBallLeft.transform.up = -dir;
 
-        Debug.Log(dir);
+        _smileObject.SetActive(_followObjectTransform.position.x < 0);
+        _scaredObject.SetActive(_followObjectTransform.position.x >= 0);
     }
 
     #endregion

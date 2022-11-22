@@ -22,6 +22,11 @@ public class Paddle : MonoBehaviour
     {
         transform.position = _paddleInitialTransform.position;
     }
+
+    public void SetPaddleSpeed (float value)
+    {
+        _movementSpeed = value;
+    }
     
 }
 
