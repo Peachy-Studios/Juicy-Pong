@@ -19,6 +19,10 @@ public class Ball : MonoBehaviour
     [Tooltip("Refences JuiceSO Scriptable Object")]
     [SerializeField] 
     JuiceSO _settings;
+
+    [Tooltip("Refences Juiceable Object")]
+    [SerializeField]
+    Juiceable[] _juicable;
     #endregion
 
     #region Private Properties
@@ -77,6 +81,16 @@ public class Ball : MonoBehaviour
     public void SetPaddleSpeed(float value)
     {
         _speed = value;
+    }
+
+    public void PlayWinParticle()
+    {
+        if (!_settings.Options.WinParticleEffectEnabled) return;
+        
+        foreach (var item in _juicable)
+        {
+            item.Play();
+        }
     }
     #endregion
 }

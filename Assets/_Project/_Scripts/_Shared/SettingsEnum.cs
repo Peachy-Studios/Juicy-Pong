@@ -13,5 +13,5 @@ public enum SettingsEnum
     BallHitParticleEffectEnabled,
     WinParticleEffectEnabled,
     BallTrailEnabled,
-    EyeFollow,
+    EyeFollowEnabled,
 }

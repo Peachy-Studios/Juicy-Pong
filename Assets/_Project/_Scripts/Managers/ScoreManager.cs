@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
         if (!collision.gameObject.TryGetComponent(out Ball ball)) return;
 
         OnScore?.Invoke();
-
+        ball.PlayWinParticle();
         ball.ResetBall();
     }
 }

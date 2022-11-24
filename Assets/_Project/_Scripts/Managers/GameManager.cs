@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] public JuiceSO _settings;
 
     [SerializeField] List<Juiceable> _juiceables;
+
+    [SerializeField] GameObject _ballPrefab, _eyes;
     private void Awake()
     {
         //Apply save items
@@ -35,10 +37,34 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (!_settings.Options.EyeFollowEnabled)
+        {
+            if (_eyes.activeSelf) _eyes.SetActive(false);
+            return;
+        }
+
+        else
+        {
+            if (!_eyes.activeSelf) _eyes.SetActive(true);
+        }
+    }
+
     private void OnApplicationQuit()
     {
         // Save Game
         SerializationManager.Save("Save", _settings.Options);
+    }
+
+    public void InstantiateBall()
+    {
+        Instantiate(_ballPrefab);
+    }
+
+    public void RestartLevel()
+    {
+        SceneHandler.ReloadScene();
     }
 }
 

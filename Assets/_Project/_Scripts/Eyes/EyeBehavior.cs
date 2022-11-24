@@ -24,6 +24,17 @@ public class EyeBehavior : Juiceable
     #region MonoBehaviour Callbacks
     private void Update()
     {
+        if(!_gameManager._settings.Options.EyeFollowEnabled)
+        {
+            if (gameObject.activeSelf) gameObject.SetActive(false);
+            return;
+        }
+
+        else
+        {
+            if (!gameObject.activeSelf) gameObject.SetActive(true);
+        }
+
         Vector3 targetPos = _followObjectTransform.position;
 
         Vector2 dir = targetPos - _eyeBallRight.position;
